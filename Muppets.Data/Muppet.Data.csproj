@@ -55,6 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202105101741526_Updte-Database.cs" />
+    <Compile Include="Migrations\202105101741526_Updte-Database.Designer.cs">
+      <DependentUpon>202105101741526_Updte-Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Muppet.cs" />
@@ -64,6 +68,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105101741526_Updte-Database.resx">
+      <DependentUpon>202105101741526_Updte-Database.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

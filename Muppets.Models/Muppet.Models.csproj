@@ -54,11 +54,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MovieCreate.cs" />
+    <Compile Include="MovieDetail.cs" />
+    <Compile Include="MovieList.cs" />
+    <Compile Include="MovieUpdate.cs" />
+    <Compile Include="MuppetCreate.cs" />
+    <Compile Include="MuppetDetail.cs" />
+    <Compile Include="MuppetList.cs" />
+    <Compile Include="MuppetUpdate.cs" />
+    <Compile Include="PerformerCreate.cs" />
+    <Compile Include="PerformerDetail.cs" />
+    <Compile Include="PerformerList.cs" />
+    <Compile Include="PerformerUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Muppets.Data\Muppet.Data.csproj">
+      <Project>{8EA75A2D-C352-4003-B964-7FE8004004A0}</Project>
+      <Name>Muppet.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
