@@ -33,6 +33,8 @@ namespace Muppets.Data
         }
 
         public DbSet<Muppet> Muppets { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Performer> Performers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
