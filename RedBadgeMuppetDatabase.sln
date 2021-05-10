@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBadgeMuppetDatabase", "RedBadgeMuppetDatabase\RedBadgeMuppetDatabase.csproj", "{DFFE9F53-0803-484A-BA16-B86C37A88A6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muppets.Data", "Muppets.Data\Muppets.Data.csproj", "{8EA75A2D-C352-4003-B964-7FE8004004A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muppet.Data", "Muppets.Data\Muppet.Data.csproj", "{8EA75A2D-C352-4003-B964-7FE8004004A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muppets.Models", "Muppets.Models\Muppets.Models.csproj", "{08507F25-3CDA-471A-B5D8-64A15E0C0353}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muppet.Models", "Muppets.Models\Muppet.Models.csproj", "{08507F25-3CDA-471A-B5D8-64A15E0C0353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muppets.Services", "Muppets.Services\Muppets.Services.csproj", "{E4A49AC7-10F1-4750-8414-71DB2D67EEA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muppet.Services", "Muppets.Services\Muppet.Services.csproj", "{E4A49AC7-10F1-4750-8414-71DB2D67EEA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

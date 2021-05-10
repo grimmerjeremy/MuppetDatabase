@@ -252,17 +252,17 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Muppets.Data\Muppets.Data.csproj">
+    <ProjectReference Include="..\Muppets.Data\Muppet.Data.csproj">
       <Project>{8ea75a2d-c352-4003-b964-7fe8004004a0}</Project>
-      <Name>Muppets.Data</Name>
+      <Name>Muppet.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Muppets.Models\Muppets.Models.csproj">
+    <ProjectReference Include="..\Muppets.Models\Muppet.Models.csproj">
       <Project>{08507f25-3cda-471a-b5d8-64a15e0c0353}</Project>
-      <Name>Muppets.Models</Name>
+      <Name>Muppet.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Muppets.Services\Muppets.Services.csproj">
+    <ProjectReference Include="..\Muppets.Services\Muppet.Services.csproj">
       <Project>{e4a49ac7-10f1-4750-8414-71db2d67eea5}</Project>
-      <Name>Muppets.Services</Name>
+      <Name>Muppet.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
