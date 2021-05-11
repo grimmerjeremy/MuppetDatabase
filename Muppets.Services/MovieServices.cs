@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Muppets.Services
 {
@@ -36,6 +37,64 @@ namespace Muppets.Services
                     DateReleased = e.DateReleased
                 });
                 return query.ToArray();
+            }
+        }
+
+        public MovieDetail GetMovieById(int movieId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Movies
+                    .Include(e => e.MuppetsInMovie)
+                    .Include(e => e.PerformersInMovie)
+                    .Single(e => e.MovieId == movieId);
+                var namesOfMuppets = new List<string>();
+                foreach (var muppet in entity.MuppetsInMovie)
+                {
+                    namesOfMuppets.Add(muppet.MuppetName);
+                }
+                var namesOfPerformers = new List<string>();
+                foreach (var performer in entity.PerformersInMovie)
+                {
+                    namesOfPerformers.Add(performer.PerformerName);
+                }
+                return new MovieDetail()
+                {
+                    MovieId = entity.MovieId,
+                    MovieName = entity.MovieName,
+                    DateReleased = entity.DateReleased,
+                    MuppetsInMovie = namesOfMuppets,
+                    PerformersInMovie = namesOfPerformers
+                };
+            }
+        }
+
+        public MovieDetail GetMovieByName(string movieName)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Movies
+                    .Include(e => e.MuppetsInMovie)
+                    .Include(e => e.PerformersInMovie)
+                    .Single(e => e.MovieName == movieName);
+                var namesOfMuppets = new List<string>();
+                foreach (var muppet in entity.MuppetsInMovie)
+                {
+                    namesOfMuppets.Add(muppet.MuppetName);
+                }
+                var namesOfPerformers = new List<string>();
+                foreach (var performer in entity.PerformersInMovie)
+                {
+                    namesOfPerformers.Add(performer.PerformerName);
+                }
+                return new MovieDetail()
+                {
+                    MovieId = entity.MovieId,
+                    MovieName = entity.MovieName,
+                    DateReleased = entity.DateReleased,
+                    MuppetsInMovie = namesOfMuppets,
+                    PerformersInMovie = namesOfPerformers
+                };
             }
         }
 
