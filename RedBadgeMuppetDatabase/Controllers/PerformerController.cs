@@ -19,7 +19,10 @@ namespace RedBadgeMuppetDatabase.Controllers
             return View(_db.Performers.ToList());
         }
 
-
+        public ActionResult Create()
+        {
+            return View();
+        }
 
     }
 }

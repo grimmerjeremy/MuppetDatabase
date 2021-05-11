@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -112,12 +118,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -237,12 +237,15 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Muppet\Create.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Create.cshtml" />
+    <Content Include="Views\Performer\Index.cshtml" />
+    <Content Include="Views\Performer\Create.cshtml" />
     <Content Include="Views\Muppet\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Movie\" />
-    <Folder Include="Views\Performer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -258,17 +261,17 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Muppets.Data\Muppet.Data.csproj">
+    <ProjectReference Include="..\Muppets.Data\Muppets.Data.csproj">
       <Project>{8ea75a2d-c352-4003-b964-7fe8004004a0}</Project>
-      <Name>Muppet.Data</Name>
+      <Name>Muppets.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Muppets.Models\Muppet.Models.csproj">
+    <ProjectReference Include="..\Muppets.Models\Muppets.Models.csproj">
       <Project>{08507f25-3cda-471a-b5d8-64a15e0c0353}</Project>
-      <Name>Muppet.Models</Name>
+      <Name>Muppets.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Muppets.Services\Muppet.Services.csproj">
+    <ProjectReference Include="..\Muppets.Services\Muppets.Services.csproj">
       <Project>{e4a49ac7-10f1-4750-8414-71db2d67eea5}</Project>
-      <Name>Muppet.Services</Name>
+      <Name>Muppets.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

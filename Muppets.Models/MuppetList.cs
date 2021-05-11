@@ -12,6 +12,7 @@ namespace Muppets.Models
     {
         public int MuppetId { get; set; }
         public string MuppetName { get; set; }
+        public string Origin { get; set; }
         public DateTime MuppetBirthdate { get; set; }
         public Performer PerformerName { get; set; }
     }

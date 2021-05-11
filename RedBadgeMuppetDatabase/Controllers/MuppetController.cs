@@ -16,14 +16,24 @@ namespace RedBadgeMuppetDatabase.Controllers
         // GET: Muppet
         public ActionResult Index()
         {
-            List<Muppet> muppetList = _db.Muppets.ToList();
-            List<Muppet> aplhaList = muppetList.OrderBy(muppet => muppet.MuppetName).ToList();
-            return View(_db.Muppets.ToList());
+
+            return View();
         }
 
         public ActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(MuppetCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
         }
 
     }

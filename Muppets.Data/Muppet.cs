@@ -12,6 +12,7 @@ namespace Muppets.Data
     {
         [Key]
         public int MuppetId { get; set; }
+
         [Required]
         [MaxLength(50, ErrorMessage = "This name is too long.")]
         public string MuppetName { get; set; }

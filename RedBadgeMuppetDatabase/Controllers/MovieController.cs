@@ -18,5 +18,10 @@ namespace RedBadgeMuppetDatabase.Controllers
             List<Movie> aplhaList = movieList.OrderBy(movie => movie.MovieName).ToList();
             return View(_db.Movies.ToList());
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
