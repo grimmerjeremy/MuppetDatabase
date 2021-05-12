@@ -1,5 +1,6 @@
 ﻿using Muppets.Data;
 using Muppets.Models;
+using Muppets.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,13 @@ namespace RedBadgeMuppetDatabase.Controllers
     [Authorize]
     public class MuppetController : Controller
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: Muppet
         public ActionResult Index()
         {
-
-            return View();
+            var service = new MuppetServices();
+            var model = service.GetAllMuppets();
+            return View(model);
         }
 
         public ActionResult Create()
@@ -25,6 +26,7 @@ namespace RedBadgeMuppetDatabase.Controllers
             return View();
         }
 
+        //POST / Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(MuppetCreate model)
@@ -36,5 +38,15 @@ namespace RedBadgeMuppetDatabase.Controllers
             return View(model);
         }
 
+
+        //GET / Details
+
+        //GET / Edit
+
+        //POST / Edit
+
+        //GET / Delete
+
+        //POST / Delete
     }
 }

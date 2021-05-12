@@ -1,5 +1,6 @@
 ﻿using Muppets.Data;
 using Muppets.Models;
+using Muppets.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,18 +11,32 @@ namespace RedBadgeMuppetDatabase.Controllers
 {
     public class MovieController : Controller
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
+        
         // GET: Movie
         public ActionResult Index()
         {
-            List<Movie> movieList = _db.Movies.ToList();
-            List<Movie> aplhaList = movieList.OrderBy(movie => movie.MovieName).ToList();
-            return View(_db.Movies.ToList());
+            var service = new MovieServices();
+            var model = service.GetAllMovies();
+            return View(model);
         }
 
         public ActionResult Create()
         {
             return View();
         }
+
+
+        //POST / Create
+
+        //GET / Details
+
+        //GET / Edit
+
+        //POST / Edit
+
+        //GET / Delete
+
+        //POST / Delete
+
     }
 }

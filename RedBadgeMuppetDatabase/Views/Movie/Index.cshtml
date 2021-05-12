@@ -17,6 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.MovieName)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReleased)
+        </th>
         <th></th>
     </tr>
 
@@ -27,6 +30,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.MovieName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReleased)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

@@ -59,6 +59,10 @@
     <Compile Include="Migrations\202105101741526_Updte-Database.Designer.cs">
       <DependentUpon>202105101741526_Updte-Database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105121426345_Update-Database.cs" />
+    <Compile Include="Migrations\202105121426345_Update-Database.Designer.cs">
+      <DependentUpon>202105121426345_Update-Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Muppet.cs" />
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202105101741526_Updte-Database.resx">
       <DependentUpon>202105101741526_Updte-Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105121426345_Update-Database.resx">
+      <DependentUpon>202105121426345_Update-Database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
