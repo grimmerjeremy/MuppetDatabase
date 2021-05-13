@@ -102,6 +102,7 @@ namespace RedBadgeMuppetDatabase.Controllers
 
         //POST / Delete
         [HttpPost]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeletePerformer(int id)
         {

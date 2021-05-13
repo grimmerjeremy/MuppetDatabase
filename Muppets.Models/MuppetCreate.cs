@@ -12,10 +12,9 @@ namespace Muppets.Models
         [Required]
         public string MuppetName { get; set; }
         public string Origin { get; set; }
-        public int PerformerId { get; set; }
         [Required]
-        [Display(Name = "Date first appeared-")]
+        [Display(Name = "First appeared on")]
         public DateTime MuppetBirthdate { get; set; }
-
+        public int PerformerId { get; set; }
     }
 }

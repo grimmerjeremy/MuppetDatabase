@@ -1,0 +1,42 @@
+﻿@model Muppets.Models.PerformerDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PerformerDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PerformerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerformerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerformerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerformerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerformerBirthdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerformerBirthdate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PerformerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

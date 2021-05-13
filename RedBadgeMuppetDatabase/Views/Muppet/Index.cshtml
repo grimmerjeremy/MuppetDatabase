@@ -18,9 +18,6 @@
             @Html.DisplayNameFor(model => model.MuppetName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Origin)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.MuppetBirthdate)
         </th>
         <th></th>
@@ -35,15 +32,12 @@
             @Html.DisplayFor(modelItem => item.MuppetName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Origin)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.MuppetBirthdate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id = item.MuppetId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MuppetId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MuppetId })
         </td>
     </tr>
 }

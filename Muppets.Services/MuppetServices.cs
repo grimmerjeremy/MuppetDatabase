@@ -16,7 +16,9 @@ namespace Muppets.Services
             var entity = new Muppet()
             {
                 MuppetName = model.MuppetName,
-                MuppetBirthdate = model.MuppetBirthdate
+                Origin = model.Origin,
+                PerformerId = model.PerformerId,
+                MuppetBirthdate = model.MuppetBirthdate,
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -32,6 +34,7 @@ namespace Muppets.Services
             {
                 var query = ctx.Muppets.Select(e => new MuppetList()
                 {
+                    MuppetId = e.MuppetId,
                     MuppetName = e.MuppetName,
                     MuppetBirthdate = e.MuppetBirthdate
                 });
@@ -45,7 +48,7 @@ namespace Muppets.Services
             {
                 var entity = ctx.Muppets
                     .Include(e => e.MoviesAppearedIn)
-                    .Include(e => e.PerformerName)
+                    .Include(e => e.Performer)
                     .Single(e => e.MuppetId == muppetId);
 
                 var namesOfMovies = new List<string>();
@@ -60,7 +63,8 @@ namespace Muppets.Services
                     MuppetName = entity.MuppetName,
                     MuppetBirthdate = entity.MuppetBirthdate,
                     Origin = entity.Origin,
-                    PerformerName = entity.PerformerName.PerformerName,
+                    PerformerId = entity.PerformerId,
+                    PerformerName = entity.Performer.PerformerName,
                     MoviesAppearedIn = namesOfMovies
                 };
             }
@@ -72,7 +76,7 @@ namespace Muppets.Services
             {
                 var entity = ctx.Muppets
                     .Include(e => e.MoviesAppearedIn)
-                    .Include(e => e.PerformerName)
+                    .Include(e => e.Performer.PerformerName)
                     .Single(e => e.MuppetName == muppetName);
 
                 var namesOfMovies = new List<string>();
@@ -87,7 +91,8 @@ namespace Muppets.Services
                     MuppetName = entity.MuppetName,
                     MuppetBirthdate = entity.MuppetBirthdate,
                     Origin = entity.Origin,
-                    PerformerName = entity.PerformerName.PerformerName,
+                    PerformerId = entity.PerformerId,
+                    PerformerName = entity.Performer.PerformerName,
                     MoviesAppearedIn = namesOfMovies
                 };
             }

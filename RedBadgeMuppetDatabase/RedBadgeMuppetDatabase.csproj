@@ -237,9 +237,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Muppet\Index.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Performer\Index.cshtml" />
+    <Content Include="Views\Performer\Create.cshtml" />
+    <Content Include="Views\Movie\Create.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Movie\Edit.cshtml" />
+    <Content Include="Views\Movie\Delete.cshtml" />
+    <Content Include="Views\Performer\Details.cshtml" />
+    <Content Include="Views\Performer\Edit.cshtml" />
+    <Content Include="Views\Performer\Delete.cshtml" />
+    <Content Include="Views\Muppet\Create.cshtml" />
+    <Content Include="Views\Muppet\Details.cshtml" />
+    <Content Include="Views\Muppet\Index.cshtml" />
+    <Content Include="Views\Muppet\Edit.cshtml" />
+    <Content Include="Views\Muppet\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

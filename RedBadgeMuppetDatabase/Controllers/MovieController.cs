@@ -100,6 +100,7 @@ namespace RedBadgeMuppetDatabase.Controllers
 
         //POST / Delete
         [HttpPost]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteMovie(int id)
         {
