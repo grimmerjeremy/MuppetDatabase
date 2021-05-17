@@ -1,13 +1,73 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #39150C url(../Images/MuppetThemeArches.jpg) no-repeat fixed top center;
+    padding: 0;
+    margin: 0;
+    background-size: 100% 100%;
 }
 
+h4 {
+    color: #39150C;
+  /*  font-size: 5.9em;
+    padding: 0px;
+    margin: 0.5em 0 0.5em 0;*/
+}
+
+.testing {
+    color: #39150C;
+}
+
+.navbar navbar-inverse navbar-fixed-top {
+    background: url(../Images/MuppetHeader.jpg) no-repeat fixed top center;
+    padding: 0;
+    margin: 0;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+
+.col-md-4 {
+    float: left;
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 2em 1.5em 2.0em 0.5em;
+    padding: 0.5em 1em 0 4em;
+    background: url(../Images/BlueFur.jpg);
+    border: #C64342 solid 2px;
+    border-radius: 0.6em;
+}
+.col-md-4 p {
+    font-size: 1.5em;
+    color: rgb(70, 10, 10);
+    padding: 0px;
+    margin: 0px 0.5em 0em 0px;
+}
+.col-md-4 h2 {
+    font-size: 2.5em;
+    font: bolder;
+    color: black;
+    padding: 0px;
+    margin: 0px 0.5em 0em 0px;
+}
+
+.jumbotron {
+    background: #39150C url(../Images/LimeFur.jpg);
+    padding: 0;
+    margin: 0;
+    background-size: 100% 100%;
+}
+
+.Categories {
+    background-color: rgba(224, 187, 138, 0.7);
+    border: #C64342 solid 2px;
+    border-radius: 0.6em;
+}
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
