@@ -10,8 +10,11 @@ namespace Muppets.Models
 {
     public class MuppetList
     {
+        [Display(Name = "Muppet Identification Number:")]
         public int MuppetId { get; set; }
+        [Display(Name = "Muppet's Name:")]
         public string MuppetName { get; set; }
+        [Display(Name = "First appearance date:")]
         public DateTime MuppetBirthdate { get; set; }
     }
 }
