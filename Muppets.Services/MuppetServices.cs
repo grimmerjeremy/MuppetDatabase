@@ -19,6 +19,7 @@ namespace Muppets.Services
                 Origin = model.Origin,
                 PerformerId = model.PerformerId,
                 MuppetBirthdate = model.MuppetBirthdate,
+                Image = model.Image
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -65,7 +66,8 @@ namespace Muppets.Services
                     Origin = entity.Origin,
                     PerformerId = entity.PerformerId,
                     PerformerName = entity.Performer.PerformerName,
-                    MoviesAppearedIn = namesOfMovies
+                    MoviesAppearedIn = namesOfMovies,
+                    Image = entity.Image
                 };
             }
         }
@@ -93,7 +95,8 @@ namespace Muppets.Services
                     Origin = entity.Origin,
                     PerformerId = entity.PerformerId,
                     PerformerName = entity.Performer.PerformerName,
-                    MoviesAppearedIn = namesOfMovies
+                    MoviesAppearedIn = namesOfMovies,
+                    Image = entity.Image
                 };
             }
         }
@@ -105,6 +108,8 @@ namespace Muppets.Services
                 var entity = ctx.Muppets.Single(e => e.MuppetId == model.MuppetId);
                 entity.MuppetName = model.MuppetName;
                 entity.MuppetBirthdate = model.MuppetBirthdate;
+                entity.PerformerId = model.PerformerId;
+                entity.Image = model.Image;
                 return ctx.SaveChanges() == 1;
             }
         }

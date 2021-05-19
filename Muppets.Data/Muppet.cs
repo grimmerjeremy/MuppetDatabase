@@ -29,5 +29,7 @@ namespace Muppets.Data
         public DateTime MuppetBirthdate { get; set; }
 
         public List<Movie> MoviesAppearedIn { get; set; }
+
+        public string Image { get; set; }
     }
 }

@@ -64,7 +64,8 @@ namespace RedBadgeMuppetDatabase.Controllers
                 {
                     MovieId = detail.MovieId,
                     MovieName = detail.MovieName,
-                    DateReleased = detail.DateReleased
+                    DateReleased = detail.DateReleased,
+                    MovieImage = detail.MovieImage
                 };
             return View(model);
         }

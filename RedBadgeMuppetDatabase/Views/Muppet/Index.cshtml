@@ -4,11 +4,9 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="heads">
+    <h2>Muppets</h2>
+</div>
 <table class="table">
     <tr>
         <th>
@@ -23,23 +21,28 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MuppetId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MuppetName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MuppetBirthdate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.MuppetId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.MuppetId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.MuppetId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MuppetId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MuppetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MuppetBirthdate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MuppetId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MuppetId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MuppetId })
+            </td>
+        </tr>
+    }
 
 </table>
+
+<p>
+    <a class="btn btn-default" @Html.ActionLink("Create a Muppet", "Create")></a>
+</p>

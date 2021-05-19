@@ -16,7 +16,8 @@ namespace Muppets.Services
             var entity = new Movie()
             {
                 MovieName = model.MovieName,
-                DateReleased = model.DateReleased
+                DateReleased = model.DateReleased,
+                MovieImage = model.MovieImage
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -63,6 +64,7 @@ namespace Muppets.Services
                     MovieId = entity.MovieId,
                     MovieName = entity.MovieName,
                     DateReleased = entity.DateReleased,
+                    MovieImage = entity.MovieImage,
                     MuppetsInMovie = namesOfMuppets,
                     PerformersInMovie = namesOfPerformers
                 };
@@ -92,6 +94,7 @@ namespace Muppets.Services
                     MovieId = entity.MovieId,
                     MovieName = entity.MovieName,
                     DateReleased = entity.DateReleased,
+                    MovieImage = entity.MovieImage,
                     MuppetsInMovie = namesOfMuppets,
                     PerformersInMovie = namesOfPerformers
                 };
@@ -105,6 +108,7 @@ namespace Muppets.Services
                 var entity = ctx.Movies.Single(e => e.MovieId == model.MovieId);
                 entity.MovieName = model.MovieName;
                 entity.DateReleased = model.DateReleased;
+                entity.MovieImage = model.MovieImage;
                 return ctx.SaveChanges() == 1;
             }
         }

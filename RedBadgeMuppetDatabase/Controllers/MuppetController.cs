@@ -65,7 +65,8 @@ namespace RedBadgeMuppetDatabase.Controllers
                     MuppetName = detail.MuppetName,
                     MuppetBirthdate = detail.MuppetBirthdate,
                     Origin = detail.Origin,
-                    PerformerId = detail.PerformerId
+                    PerformerId = detail.PerformerId,
+                    Image = detail.Image
                 };
             return View(model);
         }

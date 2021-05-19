@@ -71,6 +71,14 @@
     <Compile Include="Migrations\202105131843320_Adjusted.Designer.cs">
       <DependentUpon>202105131843320_Adjusted.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105191654472_MuppetImage.cs" />
+    <Compile Include="Migrations\202105191654472_MuppetImage.Designer.cs">
+      <DependentUpon>202105191654472_MuppetImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105191828588_PerformerAndMovieImagesToData.cs" />
+    <Compile Include="Migrations\202105191828588_PerformerAndMovieImagesToData.Designer.cs">
+      <DependentUpon>202105191828588_PerformerAndMovieImagesToData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Muppet.cs" />
@@ -93,6 +101,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105131843320_Adjusted.resx">
       <DependentUpon>202105131843320_Adjusted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105191654472_MuppetImage.resx">
+      <DependentUpon>202105191654472_MuppetImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105191828588_PerformerAndMovieImagesToData.resx">
+      <DependentUpon>202105191828588_PerformerAndMovieImagesToData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

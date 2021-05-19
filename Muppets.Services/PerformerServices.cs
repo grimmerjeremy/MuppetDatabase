@@ -16,7 +16,8 @@ namespace Muppets.Services
             var entity = new Performer()
             {
                 PerformerName = model.PerformerName,
-                PerformerBirthdate = model.PerformerBirthdate
+                PerformerBirthdate = model.PerformerBirthdate,
+                PerformerImage = model.PerformerImage
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -62,6 +63,7 @@ namespace Muppets.Services
                     PerformerId = entity.PerformerId,
                     PerformerName = entity.PerformerName,
                     PerformerBirthdate = entity.PerformerBirthdate,
+                    PerformerImage = entity.PerformerImage,
                     MuppetsPerformedByPerformer = namesOfMuppets,
                     MoviesPerformedIn = namesOfMovies
                 };
@@ -91,6 +93,7 @@ namespace Muppets.Services
                     PerformerId = entity.PerformerId,
                     PerformerName = entity.PerformerName,
                     PerformerBirthdate = entity.PerformerBirthdate,
+                    PerformerImage = entity.PerformerImage,
                     MuppetsPerformedByPerformer = namesOfMuppets,
                     MoviesPerformedIn = namesOfMovies
                 };
@@ -104,6 +107,7 @@ namespace Muppets.Services
                 var entity = ctx.Performers.Single(e => e.PerformerId == model.PerformerId);
                 entity.PerformerName = model.PerformerName;
                 entity.PerformerBirthdate = model.PerformerBirthdate;
+                entity.PerformerImage = model.PerformerImage;
                 return ctx.SaveChanges() == 1;
             }
         }

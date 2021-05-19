@@ -13,5 +13,6 @@ namespace Muppets.Models
         public string PerformerName { get; set; }
         [Required]
         public DateTime PerformerBirthdate { get; set; }
+        public string PerformerImage { get; set; }
     }
 }

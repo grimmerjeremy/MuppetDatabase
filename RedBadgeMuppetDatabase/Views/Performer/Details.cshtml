@@ -6,37 +6,47 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>PerformerDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PerformerId)
-        </dt>
+<div class="space">
 
-        <dd>
-            @Html.DisplayFor(model => model.PerformerId)
-        </dd>
+    <div>
+        <h4>PerformerDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PerformerId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PerformerName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PerformerId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PerformerName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PerformerName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PerformerBirthdate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PerformerName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PerformerBirthdate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PerformerBirthdate)
+            </dt>
 
-    </dl>
+            <dd>
+                @Html.DisplayFor(model => model.PerformerBirthdate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PerformerImage)
+            </dt>
+
+            <dd>
+                <img src="@Html.DisplayFor(model=> model.PerformerImage)" alt="Performer Image" />
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PerformerId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PerformerId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

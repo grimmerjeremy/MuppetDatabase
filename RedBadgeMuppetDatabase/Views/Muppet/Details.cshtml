@@ -6,61 +6,72 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>MuppetDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MuppetId)
-        </dt>
+<div class="space">
 
-        <dd>
-            @Html.DisplayFor(model => model.MuppetId)
-        </dd>
+    <div>
+        <h4>MuppetDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MuppetId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MuppetName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MuppetId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MuppetName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MuppetName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Origin)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MuppetName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Origin)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Origin)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MuppetBirthdate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Origin)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MuppetBirthdate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MuppetBirthdate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PerformerId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MuppetBirthdate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PerformerId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PerformerId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PerformerName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PerformerId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PerformerName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PerformerName)
+            </dt>
 
-    </dl>
+            <dd>
+                @Html.DisplayFor(model => model.PerformerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd>
+                <img src= "@Html.DisplayFor(model=> model.Image)" alt="Muppet Image" />
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MuppetId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MuppetId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

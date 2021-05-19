@@ -13,5 +13,7 @@ namespace Muppets.Models
         public string MovieName { get; set; }
         [Required]
         public DateTime DateReleased { get; set; }
+        public string MovieImage { get; set; }
+
     }
 }

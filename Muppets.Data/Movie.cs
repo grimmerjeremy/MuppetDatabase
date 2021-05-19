@@ -15,6 +15,7 @@ namespace Muppets.Data
         public string MovieName { get; set; }
         [Required]
         public DateTime DateReleased { get; set; }
+        public string MovieImage { get; set; }
 
         public List<Muppet> MuppetsInMovie { get; set; }
         public List<Performer> PerformersInMovie { get; set; }

@@ -15,6 +15,6 @@ namespace Muppets.Models
         public int PerformerId { get; set; }
         public string PerformerName { get; set; }
         public List<string> MoviesAppearedIn { get; set; } = new List<string>();
-
+        public string Image { get; set; }
     }
 }

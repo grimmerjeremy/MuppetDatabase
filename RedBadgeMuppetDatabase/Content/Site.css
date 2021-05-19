@@ -29,6 +29,12 @@ h4 {
     padding-right: 15px;
 }
 
+.table {
+    margin: 10em auto;
+    background-color: #fff;
+    border: #C64342 solid 2.5px;
+}
+
 
 .col-md-4 {
     float: left;
@@ -37,7 +43,7 @@ h4 {
     height: 350px;
     margin: 2em 1.5em 2.0em 0.5em;
     padding: 0.5em 1em 0 4em;
-    background: url(../Images/BlueFur.jpg);
+    background-color: rgba(224, 187, 338, 0.7);
     border: #C64342 solid 2px;
     border-radius: 0.6em;
 }
@@ -58,8 +64,14 @@ h4 {
 .jumbotron {
     background: #39150C url(../Images/LimeFur.jpg);
     padding: 0;
-    margin: 0;
+    margin: 10em auto;
     background-size: 100% 100%;
+}
+
+.heads {
+    background: #39150C url(../Images/LimeFur.jpg);
+    padding: 0;
+    margin: 15em;
 }
 
 .Categories {
@@ -74,6 +86,12 @@ h4 {
 */
 .dl-horizontal dt {
     white-space: normal;
+}
+
+.space{
+    margin: 10em auto;
+    background-color: #fff;
+    border: #C64342 solid 2.5px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */

@@ -16,5 +16,6 @@ namespace Muppets.Models
         [Display(Name = "First appeared on")]
         public DateTime MuppetBirthdate { get; set; }
         public int PerformerId { get; set; }
+        public string Image { get; set; }
     }
 }
