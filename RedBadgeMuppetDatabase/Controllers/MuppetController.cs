@@ -23,6 +23,8 @@ namespace RedBadgeMuppetDatabase.Controllers
 
         public ActionResult Create()
         {
+            var service = new PerformerServices();
+            ViewBag.PerformerList = new SelectList(service.GetAllPerformers(), "PerformerId", "PerformerName");
             return View();
         }
 

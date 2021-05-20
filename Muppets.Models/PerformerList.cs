@@ -13,5 +13,7 @@ namespace Muppets.Models
         public int PerformerId { get; set; }
         [Display(Name = "Performer's Name:")]
         public string PerformerName { get; set; }
+
+
     }
 }

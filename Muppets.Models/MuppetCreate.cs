@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Options;
+using Muppets.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace Muppets.Models
 {
@@ -17,9 +21,12 @@ namespace Muppets.Models
         [Required]
         [Display(Name = "When did this muppet make its first appearance?")]
         public DateTime MuppetBirthdate { get; set; }
-        [Display(Name = "Select a performer for this muppet.")]
-        public int PerformerId { get; set; }
+
         [Display(Name = "Copy an image URL for this muppet here.")]
         public string Image { get; set; }
+        [Display(Name = "Select a performer for this muppet.")]
+        public int PerformerId { get; set; }
+
+        
     }
 }
