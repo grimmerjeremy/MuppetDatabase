@@ -15,7 +15,7 @@ namespace Muppets.Models
         public string MuppetName { get; set; }
         [Display(Name = "Muppet's Species:")]
         public string Origin { get; set; }
-        [Display(Name = "Identification Number for the Muppet's Performer:")]
+        [Display(Name = "Select the Muppet's Performer:")]
         public int PerformerId { get; set; }
         [Display(Name = "First appearance date:")]
         public DateTime MuppetBirthdate { get; set; }

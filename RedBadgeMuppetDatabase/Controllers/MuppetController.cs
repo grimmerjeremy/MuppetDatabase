@@ -23,8 +23,8 @@ namespace RedBadgeMuppetDatabase.Controllers
 
         public ActionResult Create()
         {
-            var service = new PerformerServices();
-            ViewBag.PerformerList = new SelectList(service.GetAllPerformers(), "PerformerId", "PerformerName");
+            var dropService = new PerformerServices();
+            ViewBag.PerformerList = new SelectList(dropService.GetAllPerformers(), "PerformerId", "PerformerName");
             return View();
         }
 
@@ -58,6 +58,9 @@ namespace RedBadgeMuppetDatabase.Controllers
         //GET / Edit
         public ActionResult Edit(int id)
         {
+            var dropService = new PerformerServices();
+            ViewBag.PerformerList = new SelectList(dropService.GetAllPerformers(), "PerformerId", "PerformerName");
+            
             var service = new MuppetServices();
             var detail = service.GetMuppetById(id);
             var model =
